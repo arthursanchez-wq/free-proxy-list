@@ -1,0 +1,18 @@
+// Fetch proxies with your desired options:
+var options = {
+  protocol: 'http', // http | socks4 | socks5
+  anonymity: 'elite', // transparent | anonymous | elite
+  country: 'US', // https://www.nationsonline.org/oneworld/country_code_list.htm
+  https: true, // true | false
+  speed: 10000, // 0 - 60000
+  format: 'json', // json | text
+  quantity: 1, // 1 - 20
+};
+
+proxifly.getProxy(options)
+.then(proxy => {
+  console.log('Proxies:', proxy);
+})
+.catch(e => {
+  console.error(e);
+})
